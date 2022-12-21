@@ -1,11 +1,41 @@
+/* css global styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+   font-family: 'Josefin Sans', sans-serif;
+  
+}
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+  background: linear-gradient(to bottom, #48f713 0%, #30fa07 100%);
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
 }
+
+header-content {
+  display: flex;
+  align-items: center;
+  color: #000;
+  width: 100%;
+}
+
+.container .clock{
+  font-size: medium;
+  color: rgb(255, 255, 255);
+  letter-spacing: 5px;
+}
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -13,14 +43,7 @@
   }
 }
 
-.App-header {
-  background: linear-gradient(to bottom, #48f713 0%, #30fa07 100%);
-  ;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-  color: white;
-}
+
 
 .App-body {
   background-color: #22262e;
