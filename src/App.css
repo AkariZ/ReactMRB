@@ -4,15 +4,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
-body {
-   font-family: 'Josefin Sans', sans-serif;
-  
-}
-.App {
-  text-align: center;
-}
 
 header {
   background: linear-gradient(to bottom, #48f713 0%, #30fa07 100%);
@@ -22,58 +16,20 @@ header {
   color: white;
 }
 
-header-content {
-  display: flex;
-  align-items: center;
-  color: #000;
-  width: 100%;
-}
-
-.container .clock{
-  font-size: medium;
-  color: rgb(255, 255, 255);
-  letter-spacing: 5px;
-}
-
-
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-
 
 .App-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ;
   background-color: #22262e;
-  background-size: cover;
-
-}
-
-.App-footer {
-  font-size: 30px;
-  
-  background: linear-gradient(to bottom, #48f713 0%, #30fa07 100%);
-  background-size: cover;
-  padding: 30px;
-  text-align: center;
-  color: white;
+  min-height: 100vh;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .App-Status {
   color: green;
@@ -87,4 +43,15 @@ header-content {
   text-align: left;
   margin-left: 2cm;
 
+}
+
+
+.App-footer {
+  font-size: 30px;
+
+  background: linear-gradient(to bottom, #48f713 0%, #30fa07 100%);
+  background-size: cover;
+  padding: 30px;
+  text-align: center;
+  color: white;
 }

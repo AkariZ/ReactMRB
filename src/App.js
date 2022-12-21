@@ -24,8 +24,8 @@ function App() {
           <h1 >02.00 - 03.00</h1>
           <h2>By. </h2>
           </div>
-          <a href="#" class="btn btn-success btn-lg " tabindex="-1" 
-          role="button" aria-disabled="true">Booknow</a>
+          <button type="button" class="btn btn-success">กดเลบ</button>
+           
         </body><br />
         <footer className="App-footer">
           Design Dolly Solution co,td
