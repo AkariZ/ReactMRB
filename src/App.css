@@ -9,21 +9,21 @@
 
 
 header {
-  background: linear-gradient(to bottom, #3ba71a 0%, #20630c 100%);
-  padding: 30px;
+  background: linear-gradient(to bottom, #289108 0%, #20630c 100%);
+  padding: 20px;
   text-align: center;
-  font-size: 35px;
+  font-size: 30px;
   color: white;
 }
 
 
 .App-body {
-  display: flex;
+  display: auto;
   justify-content: center;
   align-items: center;
-  ;
   background-color: #22262e;
   min-height: 100vh;
+  padding-top: 5%;
 }
 
 .App-link {
@@ -32,26 +32,44 @@ header {
 
 
 .App-Status {
-  color: green;
+  color: rgb(79, 240, 79);
   text-align: center;
   font-size: xx-large;
 }
 
 .App-Patner {
   color: white;
-  ;
   text-align: left;
-  margin-left: 2cm;
+  margin-left: 8%;
+  padding-top: 3%;
+ 
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
 
 }
 
+.button:active {
+  transform: translateY(4px);
+}
 
 .App-footer {
   font-size: 30px;
 
   background: linear-gradient(to bottom, #3ba71a 0%, #20630c 100%);
   background-size: cover;
-  padding: 30px;
+  padding: 10px;
   text-align: center;
   color: white;
+  font-size: medium;
 }
