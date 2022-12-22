@@ -11,9 +11,7 @@ export default function App() {
       <div className="App">
         <header className="App-header">
           <Appheader />
-
         </header>
-
         <body className="App-body">
           <div class="row">
             <br />
@@ -35,3 +33,4 @@ export default function App() {
     </>
   );
 }
+
