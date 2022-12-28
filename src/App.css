@@ -1,10 +1,10 @@
 /* css global styles */
 
 .root {
- 
-    margin: 8px;
-    width: '25ch';
-  
+
+  margin: 8px;
+  width: '25ch';
+
 }
 
 
@@ -16,8 +16,16 @@
 }
 
 
-header {
+.header-home {
   background: linear-gradient(to bottom, #289108 0%, #20630c 100%);
+  padding: 20px;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+
+.header-form {
+  background: linear-gradient(to bottom, #160891 0%, #0d0c63 100%);
   padding: 20px;
   text-align: center;
   font-size: 30px;
@@ -29,7 +37,7 @@ header {
   display: auto;
   justify-content: center;
   align-items: center;
-  background-color: #22262e;
+  background-color: #ffffff;
   min-height: 100vh;
   padding-top: 5%;
 }
@@ -45,38 +53,35 @@ header {
   font-size: xx-large;
 }
 
+.App-Status2 {
+  color: rgb(56, 38, 121);
+  text-align: center;
+  font-size: xx-large;
+}
+
 .App-Patner {
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: left;
   margin-left: 8%;
   padding-top: 3%;
- 
+
 }
 
 .button {
-  display: inline-block;
-  padding: 15px 25px;
-  font-size: 24px;
+
   cursor: pointer;
   text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  border: none;
-  border-radius: 15px;
-  
 
 }
 
 .button:active {
   transform: translateY(4px);
+
 }
 
 
-
-.App-footer {
+.App-footer-home {
   font-size: 30px;
-
   background: linear-gradient(to bottom, #3ba71a 0%, #20630c 100%);
   background-size: cover;
   padding: 10px;
@@ -85,17 +90,35 @@ header {
   font-size: medium;
 }
 
-.App-form{
+.App-footer-form {
+  font-size: 30px;
+  background: linear-gradient(to bottom, #160891 0%, #0d0c63 100%);
+  background-size: cover;
+  padding: 10px;
   text-align: center;
-  
- 
+  color: white;
+  font-size: medium;
+}
+
+.App-form {
+  text-align: center;
+
+
 }
 
 .App-form-body {
   display: auto;
   justify-content: center;
   align-items: center;
-  background-color: #2e2626;
+  background-color: #ffffff;
   min-height: 100vh;
   padding-top: 5%;
+}
+
+.Form {
+  display: flex;
+  justify-content: center;
+  border: 15px solid rgb(255, 255, 255);
+
+
 }
