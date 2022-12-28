@@ -1,63 +1,63 @@
-import React, { useState } from "react";
-import { TextField, Button } from "@mui/material";
+import React from "react";
+import "../App.css";
+import Appheader from "../components/header";
+import { Form, Button, Container } from "react-bootstrap";
 
-function PageForm() {
-  const [date, setDate] = useState("");
-  const [hour, setHour] = useState("");
-  const [name, setName] = useState("");
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // code to store the reservation goes here
-  };
-
-  const { formStyles, buttonStyles, textFieldStyles } = styles;
-
+export default function PageForm() {
   return (
-    <form onSubmit={handleSubmit} style={formStyles}>
-      <TextField
-        label="Date"
-        type="date"
-        value={date}
-        onChange={(event) => setDate(event.target.value)}
-        style={textFieldStyles}
-      />
-      <br />
-      <TextField
-        label="Hour"
-        type="time"
-        value={hour}
-        onChange={(event) => setHour(event.target.value)}
-        style={textFieldStyles}
-      />
-      <br />
-      <TextField
-        label="Name"
-        type="text"
-        value={name}
-        onChange={(event) => setName(event.target.value)}
-        style={textFieldStyles}
-      />
-      <br />
-      <Button type="submit" variant="contained" color="primary" style={buttonStyles}>
-        Submit
-      </Button>
-    </form>
+    <div className="App">
+      <header className="App-header">
+        <Appheader />
+      </header>
+      <body className="App-form-body">
+        <Container>
+          <br />
+          <div className="App-Status">Book a Meeting Room</div>
+          <br />
+          <br /><br /><br />
+          <Form className="App-form">
+            <Form.Group>
+              <Form.Label>Name</Form.Label>
+              <Form.Control type="text" placeholder="Enter your name" required />
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>Email</Form.Label>
+              <Form.Control type="email" placeholder="Enter your email" required />
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>Password</Form.Label>
+              <Form.Control type="password" placeholder="Enter your password" />
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>Number of attendees</Form.Label>
+              <Form.Control type="number" placeholder="Enter the number of attendees" />
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>Date of meeting</Form.Label>
+              <Form.Control type="date" />
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>Start time</Form.Label>
+              <Form.Control type="time" />
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>End time</Form.Label>
+              <Form.Control type="time" />
+            </Form.Group>
+            <Form.Group>
+              <Form.Label>Special requests (optional)</Form.Label>
+              <Form.Control as="textarea" rows="4" />
+            </Form.Group>
+            <Button variant="primary" type="submit">
+              Start booking
+            </Button>
+          </Form>
+          <br />
+        </Container>
+      </body>
+      <footer className="App-footer">
+        Design Dolly Solution co,td
+      </footer>
+    </div>
   );
 }
-
-const styles = {
-  formStyles: {
-    width: "50%",
-    margin: "0 auto"
-  },
-  buttonStyles: {
-    width: "100%"
-  },
-  textFieldStyles: {
-    display: "block",
-    width: "100%"
-  }
-};
-
-export default PageForm;

@@ -1,5 +1,13 @@
 /* css global styles */
 
+.root {
+ 
+    margin: 8px;
+    width: '25ch';
+  
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -56,12 +64,15 @@ header {
   color: #fff;
   border: none;
   border-radius: 15px;
+  
 
 }
 
 .button:active {
   transform: translateY(4px);
 }
+
+
 
 .App-footer {
   font-size: 30px;
@@ -74,3 +85,17 @@ header {
   font-size: medium;
 }
 
+.App-form{
+  text-align: center;
+  
+ 
+}
+
+.App-form-body {
+  display: auto;
+  justify-content: center;
+  align-items: center;
+  background-color: #2e2626;
+  min-height: 100vh;
+  padding-top: 5%;
+}

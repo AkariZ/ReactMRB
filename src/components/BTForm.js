@@ -1,15 +1,15 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+
 import { Link } from 'react-router-dom';
-import "../App.css"
+import { Button } from '@mui/material';
 
 function BTForm() {
   return (
-    <div className="button">
+    <div className='button'>
       <Link to="/PageForm">
-        <Button>Book Now</Button>
+        <Button variant="contained">Book Now</Button>
       </Link>
-    </div>
+  </div>
   );
 }
 

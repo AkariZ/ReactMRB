@@ -18,7 +18,7 @@ function PageHome() {
             <br />
               <div className="App-Patner ">
                 <h2>Welcome Patner</h2>
-                <h1 style={{ color: "blue" }}>02.00 - 03.00</h1>
+                <h1 style={{ color: "Blue" }}>02.00 - 03.00</h1>
                 <h2>By. </h2>
                </div>
               <BTForm/>      
