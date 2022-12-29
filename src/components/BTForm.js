@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@mui/material';
 
 
-function BTForm() {
+const BTForm = () => {
   return (
     
     <div className='button'>
