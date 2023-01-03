@@ -74,10 +74,6 @@
 
 }
 
-.button:active {
-  transform: translateY(4px);
-
-}
 
 
 .App-footer-home {
@@ -116,9 +112,6 @@
 }
 
 .Form {
-  display: flex;
+  
   justify-content: center;
-  border: 15px solid rgb(255, 255, 255);
-
-
 }
