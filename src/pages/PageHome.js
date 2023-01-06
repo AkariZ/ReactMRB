@@ -15,14 +15,15 @@ const PageHome = () => {
   }
 
   const renderCard = () => users.map(user => (
-    <div className="bg-gray-300 p-5 flex items-center justify-between" key={user.id}>
+    <div className=" bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 p-5 flex items-center justify-between   " key={user.id}>
       <div>
-        <h3 className="font-bold text-lg text-gray-700">{user.name}</h3>
-        <span className="font-normal text-gray-600">{user.email}</span><br />
-        <span className="font-normal text-gray-600">{user.StartTime}</span> -  <span className="font-normal text-gray-600">{user.EndTime}</span><br />
+      <span className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{user.subject}</span><br />
+        <span className="font-bold text-xl text-green-400">{user.StartTime}</span> -  <span className="font-bold text-xl text-green-400">{user.EndTime}</span><br />
+        <span className="font-bold text-xl text-gray-600">{user.room}</span><br />
+        <p className="font-bold text-lg text-gray-700">{user.name}</p>
         
       </div>
-      <div className="flex gap-4">
+      <div className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-500 rounded-lg hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">
 
         <button
           onClick={() => handleRemoveUser(user.id)}
@@ -48,9 +49,9 @@ const PageHome = () => {
           <div className="App-Status">Available</div>
           <br />
           <div className="App-Patner ">
-            <h2>Welcome Patner</h2>
+            <h2>Welcome Partner</h2>
             <h1 style={{ color: "Green" }}>02.00 - 03.00</h1>
-            <h2>By. </h2>
+            <h2>by Admin</h2>
           </div>
           <div className="button">
             <Link to="/PageForm"><Button>Book</Button></Link>

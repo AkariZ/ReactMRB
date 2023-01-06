@@ -8,28 +8,33 @@ import { v4 as uuidv4 } from 'uuid';
 import Button from "../components/Button";
 import { addUser } from "./userSlice";
 import TextField from "../components/TextField";
-import { Modal, Form, TimePicker } from "antd";
+import { Modal, Form, TimePicker, Select, Input } from "antd";
+import { Option } from "antd/es/mentions";
+
+
 
 const PageForm = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [values, setValues] = useState({
+    subject: '',
     name: '',
-    email: '',
     StartTime: '',
     EndTime: '',
+    room: '',
   });
 
   const handleAddUser = () => {
-    setValues({ name: '', email: '', StartTime: '', EndTime: '', });
+    setValues({ subject: '', name: '', StartTime: '', EndTime: '', room: '' });
     dispatch(addUser({
       id: uuidv4(),
+      subject: values.subject,
       name: values.name,
-      email: values.email,
       StartTime: values.StartTime,
-      EndTime: values.EndTime
+      EndTime: values.EndTime,
+      room: values.room,
     }));
-    
+
     Modal.confirm({
       title: "Are you sure?",
       content: "Are you sure you want to start booking?",
@@ -46,6 +51,7 @@ const PageForm = () => {
     });
   };
 
+
   return (
     <div className="App">
       <header className="header-form">
@@ -53,22 +59,22 @@ const PageForm = () => {
         <Clock />
       </header>
       <body className="App-form-body">
-        <h1 className="App-Status2">Book a Meeting Room</h1>
+        <h1 className="App-Status2">Book a Meeting Room</h1><br /><br />
         <div className="Form">
           <Form className="App-form" layout="vertical">
+
+            <Form.Item label="Subject" name="Subject" rules={[{ required: true }]} >
+              <TextField
+                value={values.subject}
+                onChange={(e) => setValues({ ...values, subject: e.target.value })}
+                inputProps={{ type: 'text', placeholder: 'Enter your Subject' }}
+              /></Form.Item>
 
             <Form.Item label="Name" name="name" rules={[{ required: true }]} >
               <TextField
                 value={values.name}
                 onChange={(e) => setValues({ ...values, name: e.target.value })}
                 inputProps={{ type: 'text', placeholder: 'Enter your name' }}
-              /></Form.Item>
-
-            <Form.Item label="Email" name="email" rules={[{ required: true, }]}>
-              <TextField
-                value={values.email}
-                onChange={(e) => setValues({ ...values, email: e.target.value })}
-                inputProps={{ type: 'email', placeholder: 'Enter your email' }}
               /></Form.Item>
 
             <Form.Item label="Start time" name="starttime" rules={[{ required: true }]}>
@@ -79,16 +85,26 @@ const PageForm = () => {
                 inputProps={{ type: 'time', placeholder: 'Select a date' }}
               /></Form.Item>
 
-<Form.Item label="End time" name="endTime" rules={[{ required: true }]}>
-            <TextField 
-          
-              value={values.reservationTime}
-              onChange={(e) => setValues({ ...values, EndTime: e.target.value })}
-              inputProps={{ type: 'time', placeholder: 'Select a date' }}
-            /></Form.Item>
+            <Form.Item label="End time" name="endTime" rules={[{ required: true }]}>
+              <TextField
 
+                value={values.reservationTime}
+                onChange={(e) => setValues({ ...values, EndTime: e.target.value })}
+                inputProps={{ type: 'time', placeholder: 'Select a date' }}
+              /></Form.Item>
 
-            <Button onClick={handleAddUser}>Submit</Button>
+            <Form.Item label="Meeting room" name="room" rules={[{ required: true }]}>
+              <Select
+                value={values.room}
+                onChange={(selectedRoom) => setValues({ ...values, room: selectedRoom })}
+              >
+                <Option value="room1">Room 1</Option>
+                <Option value="room2">Room 2</Option>
+                <Option value="room3">Room 3</Option>
+              </Select>
+            </Form.Item>
+            
+            <Button onClick={handleAddUser} className>Submit</Button>
           </Form>
         </div>
         <br />
